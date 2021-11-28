@@ -25,7 +25,7 @@ namespace CQRS.Domain.Entity
         public decimal Valor { get; set; }
 
         [JsonPropertyName("Estoque")]
-        public List<Estoque> Estoque { get; set; }
+        public IList<Estoque> Estoque { get; set; }
 
     }
 }

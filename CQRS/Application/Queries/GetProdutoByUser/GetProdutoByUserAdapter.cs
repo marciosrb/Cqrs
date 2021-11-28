@@ -6,7 +6,7 @@ namespace CQRS.Application.Queries.GetProdutoByUser
 {
     public class GetProdutoByUserAdapter
     {
-        public List<ProdutoDto> Adapt(List<Produto> produto)
+        public IList<ProdutoDto> Adapt(IList<Produto> produto)
         {
             //return ProdutoDto.Build(produto);
             return produto.Select(x =>  ProdutoDto.Build(x)).ToList();
