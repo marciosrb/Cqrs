@@ -19,7 +19,7 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
             return ProdutoReadRepository.FindProdutoById(produtoId);
         }
 
-        public List<Produto> FindProdutoByUser(string usuarioName)
+        public IList<Produto> FindProdutoByUser(string usuarioName)
         {
             return ProdutoReadRepository.FindProdutoByUser(usuarioName);
         }
