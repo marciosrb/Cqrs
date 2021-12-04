@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace CQRS.Application.Queries.GetProdutoByUser
 {
-    public class GetProdutoByUserResponse
+  /*  public class GetProdutoByUserResponse
     {
         [JsonPropertyNameAttribute("produto")]
         public IList<ProdutoDto> Produto { get; set; }
@@ -13,5 +13,5 @@ namespace CQRS.Application.Queries.GetProdutoByUser
 
         [JsonPropertyNameAttribute("statusCode")]
         public int StatusCode { get; set; }
-    }
+    }*/
 }

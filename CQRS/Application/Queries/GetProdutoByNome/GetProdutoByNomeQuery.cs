@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CQRS.Application.Queries
 {
-    public class GetProdutoByIdQuery : IRequestHandler<GetProdutoByIdRequest, GetProdutoByIdResponse>
+    public class GetProdutoByNomeQuery : IRequestHandler<GetProdutoByNomeRequest, GetProdutoByNomeResponse>
     {
         #region Properties
         private IProdutoRepository ProdutoRepository { get; }
@@ -16,7 +16,7 @@ namespace CQRS.Application.Queries
 
         #region Constructor
 
-        public GetProdutoByIdQuery(
+        public GetProdutoByNomeQuery(
             IProdutoRepository produtoRepository)
         {
             ProdutoRepository = produtoRepository;
@@ -24,15 +24,15 @@ namespace CQRS.Application.Queries
 
         #endregion
 
-        public async Task<GetProdutoByIdResponse> Handle(
-            GetProdutoByIdRequest request,
+        public async Task<GetProdutoByNomeResponse> Handle(
+            GetProdutoByNomeRequest request,
             CancellationToken cancellationToken)
         {
-            var response = new GetProdutoByIdResponse();
+            var response = new GetProdutoByNomeResponse();
 
             try
             {
-                var produto = ProdutoRepository.FindProdutoById(request.ProdutoId);
+                var produto = ProdutoRepository.FindProdutoByNome(request.Nome);
 
                 if (produto == null)
                 {
@@ -42,7 +42,7 @@ namespace CQRS.Application.Queries
                     return await Task.FromResult(response);
                 }
 
-                var result = new GetProdutoByUserAdapter().Adapt(produto);
+                var result = new GetProdutoByNomeAdapter().Adapt(produto);
 
                 response.Produto = result;
                 response.StatusCode = (int)HttpStatusCode.OK;
@@ -53,7 +53,7 @@ namespace CQRS.Application.Queries
             catch (Exception ex)
             {
                 response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                response.Message = "An unexpected error occurred.";
+                response.Message = "An unexpected error occurred. ";
 
                 return await Task.FromResult(response);
             }

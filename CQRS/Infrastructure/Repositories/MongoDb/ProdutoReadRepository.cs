@@ -19,13 +19,13 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
             _produto = database.GetCollection<Produto>(settings.CollectionName);
         }
 
-        public List<Produto> FindProdutoById() =>
-            _produto.Find(book => true).ToList();
+       /* public List<Produto> FindProdutoByNome() =>
+            _produto.Find(book => true).ToList();*/
 
-        public Produto FindProdutoById(string produtoId) =>
-            _produto.Find<Produto>(x => x.Codigo == produtoId).FirstOrDefault();
+        public Produto FindProdutoByNome(string nome) =>
+            _produto.Find<Produto>(x => x.Nome == nome).FirstOrDefault();
 
-        public IList<Produto> FindProdutoByUser(string usuarioName) =>
-            _produto.Find(x => x.Usuario == usuarioName.ToLower()).ToList();
+      /*  public IList<Produto> FindProdutoByUser(string usuarioName) =>
+            _produto.Find(x => x.Usuario == usuarioName.ToLower()).ToList();*/
     }
 }

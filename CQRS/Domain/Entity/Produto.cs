@@ -10,21 +10,17 @@ using System.Threading.Tasks;
 namespace CQRS.Domain.Entity
 {
     public class Produto : Base
-    {
-        [ExcludeFromCodeCoverage]
-        [BsonElement("Codigo")]
-        public string Codigo { get; set; }
-
-        [BsonElement("Usuario")]
-        public string Usuario { get; set; }
-
-        [BsonElement("Nome")]
+    { 
+        [JsonPropertyNameAttribute("Nome")]
         public string Nome { get; set; }
 
-        [BsonElement("Valor")]
-        public decimal Valor { get; set; }
+        [JsonPropertyNameAttribute("Tipo")]
+        public string Tipo { get; set; }
 
-        [JsonPropertyName("Estoque")]
+        [JsonPropertyNameAttribute("Preço")]
+        public decimal Preco { get; set; }        
+
+        [JsonPropertyNameAttribute("Estoque")]
         public IList<Estoque> Estoque { get; set; }
 
     }
