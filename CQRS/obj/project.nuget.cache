@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w57DkAvU4QoE2+RD60UeD6WanNkD3c+Z0gaOhgr9KiMyPbpt12QHA6VYsDrFQVoCeZUDzd+fSnhXIm+5IEZ6Hw==",
+  "dgSpecHash": "yhS28tiVIUFk6Fb7LpJXVV8AwPlQC75WMTRfpPzM/uRGeQk9R2v2F0KLcmsykqOkmcV4TCW8N354t2z+fFqkog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\CQRS.csproj",
+  "projectFilePath": "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\ardalis.guardclauses\\3.2.0\\ardalis.guardclauses.3.2.0.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",

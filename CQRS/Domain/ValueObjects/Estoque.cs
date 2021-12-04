@@ -7,10 +7,10 @@ namespace CQRS.Domain.ValueObjects
     {
 
         [ExcludeFromCodeCoverage]
-        [BsonElement("Corredor")]
-        public string Corredor { get; set; }
+        [BsonElement("EstoqueMinimo")]
+        public string EstoqueMinimo { get; set; }
 
-        [BsonElement("Repositor")]
-        public string Repositor { get; set; }
+        [BsonElement("EstoqueAtual")]
+        public string EstoqueAtual { get; set; }
     }
 }

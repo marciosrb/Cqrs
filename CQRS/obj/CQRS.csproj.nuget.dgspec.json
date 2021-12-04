@@ -1,22 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\CQRS.csproj": {}
+    "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\CQRS.csproj": {
+    "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\CQRS.csproj",
+        "projectUniqueName": "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj",
         "projectName": "CQRS",
-        "projectPath": "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\CQRS.csproj",
+        "projectPath": "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj",
         "packagesPath": "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.siqueira.ribeiro\\source\\repos\\CQRS\\CQRS\\obj\\",
+        "outputPath": "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
+          "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\NuGet.Config",
           "C:\\Users\\m.siqueira.ribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

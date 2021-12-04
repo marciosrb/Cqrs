@@ -18,6 +18,7 @@ namespace CQRS.CrossCutting.DependencyInjection
                 sp.GetRequiredService<IOptions<MongoDatabaseSettings>>().Value);
 
             services.AddTransient<IProdutoReadRepository, ProdutoReadRepository>();
+            services.AddTransient<IProdutoWriteRepository, ProdutoWriteRepository>();
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
 
             return services;

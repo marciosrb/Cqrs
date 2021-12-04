@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using CQRS.Application.Command.CreateProduto;
 using CQRS.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -30,15 +31,28 @@ namespace CQRS.Controllers
 
         #endregion
 
+        #region Commands
+        [HttpPost]
+        public async Task<ActionResult> CreateProduto(
+            [FromBody] CreateProdutoRequest request,
+            CancellationToken cancellationToken)
+        {           
+            var response = await Mediator.Send(request, cancellationToken);
+            
+            return Ok(response);
+        }
+
+        #endregion
+
         [HttpGet]
-        [Route("{produtoId}")]
-        public async Task<ActionResult> GetProdutoById(
-           [FromRoute] string produtoId,
+        [Route("{nomeProduto}")]
+        public async Task<ActionResult> GetProdutoByNome(
+           [FromRoute] string nomeProduto,
            CancellationToken cancellationToken)
         {
-            var request = new GetProdutoByIdRequest
+            var request = new GetProdutoByNomeRequest
             {
-                ProdutoId = produtoId
+                Nome = nomeProduto
             };
 
             var response = await Mediator.Send(request, cancellationToken);

@@ -1,6 +1,8 @@
-﻿namespace CQRS.Application.Queries
+﻿using CQRS.Application.DataTransferObject;
+
+namespace CQRS.Application.Queries
 {
-    public class GetProdutoByUserAdapter
+    public class GetProdutoByNomeAdapter
     {
         public ProdutoDto Adapt(Domain.Entity.Produto produto)
         {
