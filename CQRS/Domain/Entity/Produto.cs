@@ -11,16 +11,10 @@ namespace CQRS.Domain.Entity
 {
     public class Produto : Base
     { 
-        [JsonPropertyNameAttribute("Nome")]
-        public string Nome { get; set; }
-
-        [JsonPropertyNameAttribute("Tipo")]
+        public string NomeProduto { get; set; }
+        public string UsuarioCadastro { get; set; }
         public string Tipo { get; set; }
-
-        [JsonPropertyNameAttribute("Preço")]
-        public decimal Preco { get; set; }        
-
-        [JsonPropertyNameAttribute("Estoque")]
+        public decimal Preco { get; set; }
         public IList<Estoque> Estoque { get; set; }
 
     }

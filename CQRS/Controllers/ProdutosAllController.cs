@@ -30,7 +30,7 @@ namespace CQRS.Controllers
 
         #endregion
 
-     /*   [HttpGet]
+        [HttpGet]
         [Route("{userName}")]
         public async Task<ActionResult> GetProdutoByUser(
            [FromRoute] string userName,
@@ -44,6 +44,6 @@ namespace CQRS.Controllers
             var response = await Mediator.Send(request, cancellationToken);
 
             return Ok(response);
-        }*/
+        }
     }
 }

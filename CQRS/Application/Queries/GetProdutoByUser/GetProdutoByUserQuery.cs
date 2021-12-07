@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CQRS.Application.Queries.GetProdutoByUser
 {
-  /*  public class GetProdutoByUserQuery : IRequestHandler<GetProdutoByUserRequest, GetProdutoByUserResponse>
+    public class GetProdutoByUserQuery : IRequestHandler<GetProdutoByUserRequest, GetProdutoByUserResponse>
     {
         #region Properties
         private IProdutoRepository ProdutoRepository { get; }
@@ -35,7 +35,7 @@ namespace CQRS.Application.Queries.GetProdutoByUser
             {
                 var produto = ProdutoRepository.FindProdutoByUser(request.UserName);
 
-                var createProdutoResponse = adapter.Adapt(produto);
+                var createProdutoResponse = adapter.Adapt(produto);                
 
                 if (produto.Count == 0)
                 {
@@ -59,5 +59,5 @@ namespace CQRS.Application.Queries.GetProdutoByUser
                 return await Task.FromResult(response);
             }
         }
-    }*/
+    }
 }

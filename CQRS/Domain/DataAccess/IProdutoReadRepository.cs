@@ -6,6 +6,6 @@ namespace CQRS.Domain.DataAcess
     public interface IProdutoReadRepository
     {
           Produto FindProdutoByNome(string nome);
-      //  public IList<Produto> FindProdutoByUser(string usuarioName);
+          public IList<Produto> FindProdutoByUser(string usuarioName);
     }
 }
