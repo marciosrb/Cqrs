@@ -13,8 +13,11 @@ namespace CQRS.Application.DataTransferObject
         [JsonPropertyNameAttribute("id")]
         public string Id { get; set; }       
 
-        [JsonPropertyNameAttribute("nome")]
-        public string Nome { get; set; }
+        [JsonPropertyNameAttribute("nomeProduto")]
+        public string NomeProduto { get; set; }
+        
+        [JsonPropertyNameAttribute("usuarioCadastro")]
+        public string UsuarioCadastro { get; set; }
 
         [JsonPropertyNameAttribute("tipo")]
         public string Tipo { get; set; }
@@ -30,7 +33,8 @@ namespace CQRS.Application.DataTransferObject
             return new Domain.Entity.Produto
             {
                Id = produto.Id,              
-               Nome = produto.Nome,
+               NomeProduto = produto.NomeProduto,
+               UsuarioCadastro = produto.UsuarioCadastro,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
@@ -41,7 +45,8 @@ namespace CQRS.Application.DataTransferObject
         {
             return new ProdutoDto
             {                          
-               Nome = produto.Nome,
+               NomeProduto = produto.NomeProduto,
+               UsuarioCadastro = produto.UsuarioCadastro,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()

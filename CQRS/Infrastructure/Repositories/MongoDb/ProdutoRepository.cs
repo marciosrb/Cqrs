@@ -22,11 +22,11 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
         {
             return ProdutoReadRepository.FindProdutoByNome(nome);
         }
-/*
+
         public IList<Produto> FindProdutoByUser(string usuarioName)
         {
             return ProdutoReadRepository.FindProdutoByUser(usuarioName);
-        }*/
+        }
 
         public async Task<Domain.Entity.Produto> Create(Domain.Entity.Produto produto)
         {

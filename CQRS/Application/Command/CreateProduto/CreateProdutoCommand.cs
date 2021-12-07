@@ -30,7 +30,7 @@ namespace CQRS.Application.Command.CreateProduto
         {
             var produto = new CreateProdutoAdapter().Adapt(request.Produto);
             
-            var resultado =  await ProdutoRepository.Create(produto);
+            var resultado =  await ProdutoRepository.Create(produto);                                 
 
             response.Message = "Success";
             response.StatusCode = (int)HttpStatusCode.OK;
