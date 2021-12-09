@@ -90,3 +90,4 @@ C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_est
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.pdb
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.genruntimeconfig.cache
+C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

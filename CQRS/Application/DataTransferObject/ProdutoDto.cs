@@ -1,7 +1,9 @@
-﻿using CQRS.Domain.Entity;
+﻿using CQRS.CrossCutting.Commom;
+using CQRS.Domain.Entity;
 using CQRS.Domain.Enum;
 using CQRS.Domain.ValueObjects;
 using MongoDB.Bson;
+//using Newtonsoft.Json;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
@@ -22,8 +24,8 @@ namespace CQRS.Application.DataTransferObject
         [JsonPropertyNameAttribute("usuarioCadastro")]
         public string UsuarioCadastro { get; set; }      
         
-        [BsonRepresentation(BsonType.String)]         
-        public Cidade Cidade { get; set; }
+        [JsonPropertyNameAttribute("cidade")]         
+        public string Cidade { get; set; }
 
         [JsonPropertyNameAttribute("tipo")]
         public string Tipo { get; set; }
@@ -35,13 +37,15 @@ namespace CQRS.Application.DataTransferObject
         public IList<Estoque> Estoque { get; set; }
 
         internal static Domain.Entity.Produto Build(ProdutoDto produto)
-        {
+        {          
+            var cidadeStatus = Convert.ToInt32(EnumExtensions.GetValueFromDescription<CidadeEnum>(produto.Cidade));
+
             return new Domain.Entity.Produto
             {
                Id = produto.Id,              
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
-               Cidade = produto.Cidade,
+               Cidade = cidadeStatus,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
@@ -49,17 +53,19 @@ namespace CQRS.Application.DataTransferObject
         }
 
         internal static ProdutoDto Build(Produto produto)
-        {
+        {       
+            var cidadeStatus = EnumExtensions.GetDescription<CidadeEnum>((CidadeEnum)produto.Cidade);
+
             return new ProdutoDto
             {                                         
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
-               Cidade = produto.Cidade,
+               Cidade = cidadeStatus,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
-            };
-            
+            };           
         }
+        
     }
 }
