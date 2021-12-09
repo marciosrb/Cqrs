@@ -1,5 +1,8 @@
 ﻿using CQRS.Domain.Entity;
+using CQRS.Domain.Enum;
 using CQRS.Domain.ValueObjects;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +20,10 @@ namespace CQRS.Application.DataTransferObject
         public string NomeProduto { get; set; }
         
         [JsonPropertyNameAttribute("usuarioCadastro")]
-        public string UsuarioCadastro { get; set; }
+        public string UsuarioCadastro { get; set; }      
+        
+        [BsonRepresentation(BsonType.String)]         
+        public Cidade Cidade { get; set; }
 
         [JsonPropertyNameAttribute("tipo")]
         public string Tipo { get; set; }
@@ -35,6 +41,7 @@ namespace CQRS.Application.DataTransferObject
                Id = produto.Id,              
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
+               Cidade = produto.Cidade,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
@@ -44,13 +51,15 @@ namespace CQRS.Application.DataTransferObject
         internal static ProdutoDto Build(Produto produto)
         {
             return new ProdutoDto
-            {                          
+            {                                         
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
+               Cidade = produto.Cidade,
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
             };
+            
         }
     }
 }

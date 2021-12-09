@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Globalization;
+using System;
 using System.Xml.Schema;
 using CQRS.CrossCutting;
 using CQRS.Domain.DataAcess;
@@ -24,6 +25,9 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
         public Produto FindProdutoByNome(string nome) =>
             _produto.Find<Produto>(x => x.NomeProduto.Contains(nome)).FirstOrDefault();
 
+        public Domain.Entity.Produto FindProdutoById(string id) =>
+             _produto.Find(x => x.Id == id).FirstOrDefault();          
+        
         public IList<Produto> FindProdutoByUser(string usuarioName) =>
             _produto.Find(x => x.UsuarioCadastro.Contains(usuarioName)).ToList();
              

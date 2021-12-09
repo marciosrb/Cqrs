@@ -23,6 +23,11 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
             return ProdutoReadRepository.FindProdutoByNome(nome);
         }
 
+        public Produto FindProdutoById(string id)
+        {
+            return ProdutoReadRepository.FindProdutoById(id);
+        }
+
         public IList<Produto> FindProdutoByUser(string usuarioName)
         {
             return ProdutoReadRepository.FindProdutoByUser(usuarioName);
@@ -31,6 +36,11 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
         public async Task<Domain.Entity.Produto> Create(Domain.Entity.Produto produto)
         {
             return await ProdutoWriteRepository.Create(produto);
+        }
+
+        public bool Delete(Domain.Entity.Produto produto)
+        {
+            return ProdutoWriteRepository.Delete(produto);
         }
     }
 }

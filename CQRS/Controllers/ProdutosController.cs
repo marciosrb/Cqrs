@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using Templates.Application.Command.DeleteProduto;
 
 namespace CQRS.Controllers
 {
@@ -56,6 +57,22 @@ namespace CQRS.Controllers
             };
 
             var response = await Mediator.Send(request, cancellationToken);
+
+            return Ok(response);
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ActionResult> DeleteProduto(
+            [FromRoute] string id,            
+            CancellationToken cancellationToken)
+        {
+            var request = new DeleteProdutoRequest
+            {
+                ProdutoId = id
+            };
+           
+            var response = await Mediator.Send(request, cancellationToken);           
 
             return Ok(response);
         }

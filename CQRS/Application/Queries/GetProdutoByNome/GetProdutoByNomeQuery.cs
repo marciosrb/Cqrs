@@ -33,7 +33,7 @@ namespace CQRS.Application.Queries
             try
             {
                 var produto = ProdutoRepository.FindProdutoByNome(request.Nome);
-
+               
                 if (produto == null)
                 {
                     response.Message = "Nenhum produto encontrado";

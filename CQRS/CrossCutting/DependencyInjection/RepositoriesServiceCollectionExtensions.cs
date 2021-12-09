@@ -9,17 +9,16 @@ namespace CQRS.CrossCutting.DependencyInjection
     public static class RepositoriesServiceCollectionExtensions
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services, IConfiguration configuration)
-        {
-            // requires using Microsoft.Extensions.Options
+        {           
             services.Configure<MongoDatabaseSettings>(
-                configuration.GetSection(nameof(MongoDatabaseSettings)));
+            configuration.GetSection(nameof(MongoDatabaseSettings)));
 
             services.AddSingleton<IMongoDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<MongoDatabaseSettings>>().Value);
+            sp.GetRequiredService<IOptions<MongoDatabaseSettings>>().Value);
 
             services.AddTransient<IProdutoReadRepository, ProdutoReadRepository>();
             services.AddTransient<IProdutoWriteRepository, ProdutoWriteRepository>();
-            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();            
 
             return services;
         }
