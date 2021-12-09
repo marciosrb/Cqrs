@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yhS28tiVIUFk6Fb7LpJXVV8AwPlQC75WMTRfpPzM/uRGeQk9R2v2F0KLcmsykqOkmcV4TCW8N354t2z+fFqkog==",
+  "dgSpecHash": "VJEAj8sWpfOZayXuPaB+jkJDJ9EBu6wQiUTuKkxjiSxVArc1XcnBroRD5DDQ4cN4WzXQrhSpbYz3w+G35kC8yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\m.siqueira.ribeiro\\OneDrive - Avanade\\Desktop\\Márcio\\Estudos\\Repos_estudo\\CQRS\\CQRS\\CQRS.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\mongodb.driver.core\\2.13.2\\mongodb.driver.core.2.13.2.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\mongodb.libmongocrypt\\1.2.2\\mongodb.libmongocrypt.1.2.2.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\mongodbclient\\1.0.23\\mongodbclient.1.0.23.nupkg.sha512",
+    "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.2\\swashbuckle.aspnetcore.6.2.2.nupkg.sha512",
     "C:\\Users\\m.siqueira.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.2\\swashbuckle.aspnetcore.swagger.6.2.2.nupkg.sha512",

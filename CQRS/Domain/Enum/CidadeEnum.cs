@@ -1,9 +1,8 @@
 using System.ComponentModel;
-using System.Text.Json.Serialization;
 
 namespace CQRS.Domain.Enum
 {  
-    public enum Cidade 
+    public enum CidadeEnum
     {
         [Description("Sorocaba")]
         SOROCABA = 1,
