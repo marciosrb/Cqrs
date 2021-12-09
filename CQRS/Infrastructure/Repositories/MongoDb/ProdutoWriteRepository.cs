@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Threading.Tasks;
 using CQRS.CrossCutting;
@@ -26,6 +27,13 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
             await _produto.InsertOneAsync(produto);
             
             return produto;
+        }
+
+        public bool Delete(Domain.Entity.Produto produto)
+        {            
+            var result = _produto.DeleteOne(x => x.Id == produto.Id); 
+
+            return result.IsAcknowledged && result.DeletedCount > 0;
         }
         #endregion
     }
