@@ -24,8 +24,8 @@ namespace CQRS.Application.DataTransferObject
         [JsonPropertyNameAttribute("usuarioCadastro")]
         public string UsuarioCadastro { get; set; }      
         
-        [JsonPropertyNameAttribute("cidade")]         
-        public string Cidade { get; set; }
+        [JsonPropertyNameAttribute("ativo")]         
+        public bool Ativo { get; set; }
 
         [JsonPropertyNameAttribute("tipo")]
         public string Tipo { get; set; }
@@ -38,14 +38,14 @@ namespace CQRS.Application.DataTransferObject
 
         internal static Domain.Entity.Produto Build(ProdutoDto produto)
         {          
-            var cidadeStatus = Convert.ToInt32(EnumExtensions.GetValueFromDescription<CidadeEnum>(produto.Cidade));
+            var isAtivo = produto.Ativo;
 
             return new Domain.Entity.Produto
-            {
+            {  
                Id = produto.Id,              
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
-               Cidade = cidadeStatus,
+               isAtivo = Convert.ToInt32(isAtivo),
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
@@ -54,13 +54,13 @@ namespace CQRS.Application.DataTransferObject
 
         internal static ProdutoDto Build(Produto produto)
         {       
-            var cidadeStatus = EnumExtensions.GetDescription<CidadeEnum>((CidadeEnum)produto.Cidade);
+            var cidadeStatus = produto.isAtivo;
 
             return new ProdutoDto
             {                                         
                NomeProduto = produto.NomeProduto,
                UsuarioCadastro = produto.UsuarioCadastro,
-               Cidade = cidadeStatus,
+               Ativo = Convert.ToBoolean(produto.isAtivo),
                Tipo = produto.Tipo,
                Preco = produto.Preco,               
                Estoque = produto.Estoque.ToList()
