@@ -15,7 +15,6 @@ namespace CQRS.CrossCutting.Commom
             .GetCustomAttribute<DescriptionAttribute>()?
             .Description ?? string.Empty;
         }
-
         public static T GetValueFromDescription<T>(string description) where T : Enum
         {
               foreach (var field in typeof(T).GetFields())
@@ -32,8 +31,7 @@ namespace CQRS.CrossCutting.Commom
                   return (T)field.GetValue(null);
                   }                  
               } 
-
-              return default(T);           
+            return default(T);           
         }
     }
 }

@@ -1,49 +1,3 @@
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\appsettings.Development.json
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.exe
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.deps.json
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.runtimeconfig.json
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.runtimeconfig.dev.json
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.pdb
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Ardalis.GuardClauses.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\DnsClient.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\JetBrains.Annotations.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MediatR.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDbContext.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\SharpCompress.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.AssemblyInfoInputs.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.AssemblyInfo.cs
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.csproj.CoreCompileInputs.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\staticwebassets\CQRS.StaticWebAssets.Manifest.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\staticwebassets\CQRS.StaticWebAssets.xml
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\scopedcss\bundle\CQRS.styles.css
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.RazorTargetAssemblyInfo.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.csproj.CopyComplete
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.dll
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.pdb
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.genruntimeconfig.cache
-C:\Users\m.siqueira.ribeiro\source\repos\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.csprojAssemblyReference.cache
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\CQRS.exe
@@ -65,6 +19,7 @@ C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_est
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\MongoDbContext.dll
+C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\SharpCompress.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -90,4 +45,3 @@ C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_est
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.dll
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.pdb
 C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\obj\Debug\netcoreapp3.1\CQRS.genruntimeconfig.cache
-C:\Users\m.siqueira.ribeiro\OneDrive - Avanade\Desktop\Márcio\Estudos\Repos_estudo\CQRS\CQRS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
