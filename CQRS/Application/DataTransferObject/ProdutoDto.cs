@@ -2,6 +2,7 @@
 using CQRS.Domain.Entity;
 using CQRS.Domain.Enum;
 using CQRS.Domain.ValueObjects;
+using CQRS.Infrastructure.Repositories.MongoDb;
 using MongoDB.Bson;
 //using Newtonsoft.Json;
 using MongoDB.Bson.Serialization.Attributes;
@@ -59,7 +60,7 @@ namespace CQRS.Application.DataTransferObject
         internal static ProdutoDto Build(Produto produto)
         {       
             var cidadeStatus = produto.isAtivo;
-
+            
             return new ProdutoDto
             {                                         
                NomeProduto = produto.NomeProduto,
