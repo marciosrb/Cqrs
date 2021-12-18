@@ -28,7 +28,7 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
         public Domain.Entity.Produto FindProdutoById(string id) =>
              _produto.Find(x => x.Id == id).FirstOrDefault();          
         
-        public IList<Produto> FindProdutoByUser(string usuarioName) =>
+        public List<Produto> FindProdutoByUser(string usuarioName) =>
             _produto.Find(x => x.UsuarioCadastro.Contains(usuarioName)).ToList();
              
     }

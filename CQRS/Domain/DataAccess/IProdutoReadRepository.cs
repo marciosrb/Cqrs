@@ -7,6 +7,6 @@ namespace CQRS.Domain.DataAcess
     {
           Produto FindProdutoByNome(string nome);
           Produto FindProdutoById(string id);
-          public IList<Produto> FindProdutoByUser(string usuarioName);
+          public List<Produto> FindProdutoByUser(string usuarioName);
     }
 }

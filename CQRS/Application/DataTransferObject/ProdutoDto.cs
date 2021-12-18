@@ -31,7 +31,10 @@ namespace CQRS.Application.DataTransferObject
         public string Tipo { get; set; }
 
         [JsonPropertyNameAttribute("preço")]
-        public decimal Preco { get; set; }        
+        public decimal Preco { get; set; }    
+
+        [JsonPropertyNameAttribute("grupo")]
+        public string Grupo { get; set; }    
 
         [JsonPropertyNameAttribute("estoque")]
         public IList<Estoque> Estoque { get; set; }
@@ -47,7 +50,8 @@ namespace CQRS.Application.DataTransferObject
                UsuarioCadastro = produto.UsuarioCadastro,
                isAtivo = Convert.ToInt32(isAtivo),
                Tipo = produto.Tipo,
-               Preco = produto.Preco,               
+               Preco = produto.Preco,
+               Grupo = produto.Grupo,              
                Estoque = produto.Estoque.ToList()
             };
         }
@@ -62,7 +66,8 @@ namespace CQRS.Application.DataTransferObject
                UsuarioCadastro = produto.UsuarioCadastro,
                Ativo = Convert.ToBoolean(produto.isAtivo),
                Tipo = produto.Tipo,
-               Preco = produto.Preco,               
+               Preco = produto.Preco,
+               Grupo = produto.Grupo,              
                Estoque = produto.Estoque.ToList()
             };           
         }
