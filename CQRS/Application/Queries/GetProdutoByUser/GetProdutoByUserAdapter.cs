@@ -10,11 +10,10 @@ namespace CQRS.Application.Queries.GetProdutoByUser
     {
         public IList<GrupoDto> Adapt(IList<Produto> produto)
         {
-            //return ProdutoDto.Build(produto);
             var grupoProduto = produto
             
             .GroupBy(x => new {x.Grupo})
-            .Select(x => new GrupoDto {Key = new KeyGrupoDto{Grupo = x.Key.Grupo}, Produtos = produto
+            .Select(group => new GrupoDto {Key = new KeyGrupoDto{Grupo = group.Key.Grupo}, Produtos = group
             .Select(x => ProdutoDto.Build(x)).ToList()});
 
             return grupoProduto.ToList();

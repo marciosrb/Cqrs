@@ -33,7 +33,7 @@ namespace CQRS.Application.DataTransferObject
         [JsonPropertyNameAttribute("preço")]
         public decimal Preco { get; set; }    
 
-        [JsonPropertyNameAttribute("grupo")]
+        [JsonPropertyNameAttribute("grupoId")]
         public string Grupo { get; set; }    
 
         [JsonPropertyNameAttribute("estoque")]

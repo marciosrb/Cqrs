@@ -2,7 +2,8 @@
 {
     public interface IMongoDatabaseSettings
     {
-        string CollectionName { get; set; }
+        string CollectionProduto { get; set; }
+        string CollectionProdutoGrupo { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }

@@ -12,24 +12,22 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
 {
     public class ProdutoReadRepository : IProdutoReadRepository
     {
-        private readonly IMongoCollection<Produto> _produto;
+        private readonly IMongoCollection<Produto> _produto;      
 
         public ProdutoReadRepository(IMongoDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _produto = database.GetCollection<Produto>(settings.CollectionName);
+            _produto = database.GetCollection<Produto>(settings.CollectionProduto);            
         }      
-
-        public Produto FindProdutoByNome(string nome) =>
-            _produto.Find<Produto>(x => x.NomeProduto.Contains(nome)).FirstOrDefault();
+        public Produto FindProdutoByNome(string nome) =>               
+           _produto.Find<Produto>(x => x.NomeProduto.Contains(nome)).FirstOrDefault();
 
         public Domain.Entity.Produto FindProdutoById(string id) =>
-             _produto.Find(x => x.Id == id).FirstOrDefault();          
-        
+             _produto.Find(x => x.Id == id).FirstOrDefault();  
+
         public List<Produto> FindProdutoByUser(string usuarioName) =>
-            _produto.Find(x => x.UsuarioCadastro.Contains(usuarioName)).ToList();
-             
+            _produto.Find(x => x.UsuarioCadastro.Contains(usuarioName)).ToList();             
     }
 }

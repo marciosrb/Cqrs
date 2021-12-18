@@ -13,15 +13,18 @@ namespace CQRS.Application.Queries.GetProdutoByUser
     {
         #region Properties
         private IProdutoRepository ProdutoRepository { get; }
+        private IGrupoRepository GrupoRepository { get; }
 
         #endregion
 
         #region Constructor
 
         public GetProdutoByUserQuery(
-            IProdutoRepository produtoRepository)
+            IProdutoRepository produtoRepository,
+            IGrupoRepository gruporepository)
         {
             ProdutoRepository = produtoRepository;
+            GrupoRepository = gruporepository;
         }
 
         #endregion
@@ -31,22 +34,33 @@ namespace CQRS.Application.Queries.GetProdutoByUser
            CancellationToken cancellationToken)
         {
             var response = new GetProdutoByUserResponse();
-           // var adapter = new GetProdutoByUserAdapter();
+            var adapter = new GetProdutoByUserAdapter();
 
             try
             {
                 var produto = ProdutoRepository.FindProdutoByUser(request.UserName);
+                var listaProduto = adapter.Adapt(produto); 
 
-               // var listaProduto = adapter.Adapt(produto);  
-               var listaProduto = new GetProdutoByUserAdapter().Adapt(produto);
-
-               /* if (produto.Count == 0)
+                if (produto.Count == 0)
                 {
                     response.Message = "Nenhum cadastro encontrado";
                     response.StatusCode = (int)HttpStatusCode.NoContent;
 
                     return await Task.FromResult(response);
-                }*/
+                }
+
+                foreach (var groupItem in listaProduto)
+                {
+                    if( groupItem.Key.Grupo != "")
+                        {
+                            var nomeGrupo = GrupoRepository.FindNomeGrupoById(groupItem.Key.Grupo);
+                            groupItem.Key.Grupo = nomeGrupo.NomeGrupoSelected;                         
+                        }
+                    else
+                        {
+                           groupItem.Key.Grupo = "Sem Grupo";
+                        }             
+                }  
 
                 response.Produto = listaProduto;
                 response.StatusCode = (int)HttpStatusCode.OK;
@@ -61,8 +75,6 @@ namespace CQRS.Application.Queries.GetProdutoByUser
 
                 return await Task.FromResult(response);
             }
-
-            
         }
     }
 }
