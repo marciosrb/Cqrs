@@ -16,8 +16,9 @@ namespace CQRS.Domain.Entity
         public string UsuarioCadastro { get; set; }
         public int isAtivo { get; set; }
         public string Tipo { get; set; }
+        public string Grupo { get; set; }
         public decimal Preco { get; set; }
-        public IList<Estoque> Estoque { get; set; }
+        public List<Estoque> Estoque { get; set; }
 
     }
 }

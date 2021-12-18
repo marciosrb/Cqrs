@@ -1,9 +1,11 @@
-﻿using CQRS.Domain.DataAcess;
+﻿using System.Collections.Generic;
+using CQRS.Domain.DataAcess;
 using MediatR;
 using System;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using CQRS.Application.DataTransferObject;
 
 namespace CQRS.Application.Queries.GetProdutoByUser
 {
@@ -29,23 +31,24 @@ namespace CQRS.Application.Queries.GetProdutoByUser
            CancellationToken cancellationToken)
         {
             var response = new GetProdutoByUserResponse();
-            var adapter = new GetProdutoByUserAdapter();
+           // var adapter = new GetProdutoByUserAdapter();
 
             try
             {
                 var produto = ProdutoRepository.FindProdutoByUser(request.UserName);
 
-                var createProdutoResponse = adapter.Adapt(produto);                
+               // var listaProduto = adapter.Adapt(produto);  
+               var listaProduto = new GetProdutoByUserAdapter().Adapt(produto);
 
-                if (produto.Count == 0)
+               /* if (produto.Count == 0)
                 {
                     response.Message = "Nenhum cadastro encontrado";
                     response.StatusCode = (int)HttpStatusCode.NoContent;
 
                     return await Task.FromResult(response);
-                }
+                }*/
 
-                response.Produto = createProdutoResponse;
+                response.Produto = listaProduto;
                 response.StatusCode = (int)HttpStatusCode.OK;
                 response.Message = "Success";
 
@@ -58,6 +61,8 @@ namespace CQRS.Application.Queries.GetProdutoByUser
 
                 return await Task.FromResult(response);
             }
+
+            
         }
     }
 }

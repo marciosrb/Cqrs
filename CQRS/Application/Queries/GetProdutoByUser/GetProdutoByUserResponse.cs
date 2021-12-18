@@ -7,7 +7,7 @@ namespace CQRS.Application.Queries.GetProdutoByUser
     public class GetProdutoByUserResponse
     {
         [JsonPropertyNameAttribute("produto")]
-        public IList<ProdutoDto> Produto { get; set; }
+        public IList<GrupoDto> Produto { get; set; }
 
         [JsonPropertyNameAttribute("message")]
         public string Message { get; set; }
