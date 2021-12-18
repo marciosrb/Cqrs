@@ -18,7 +18,10 @@ namespace CQRS.CrossCutting.DependencyInjection
 
             services.AddTransient<IProdutoReadRepository, ProdutoReadRepository>();
             services.AddTransient<IProdutoWriteRepository, ProdutoWriteRepository>();
-            services.AddTransient<IProdutoRepository, ProdutoRepository>();            
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+
+            services.AddTransient<IGrupoReadRepository, GrupoReadRepository>();
+            services.AddTransient<IGrupoRepository, GrupoRepository>();                    
 
             return services;
         }

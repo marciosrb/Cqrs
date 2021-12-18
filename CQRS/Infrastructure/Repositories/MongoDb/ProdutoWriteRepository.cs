@@ -17,7 +17,7 @@ namespace CQRS.Infrastructure.Repositories.MongoDb
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _produto = database.GetCollection<Produto>(settings.CollectionName);
+            _produto = database.GetCollection<Produto>(settings.CollectionProduto);           
         } 
 
         #region ITemplateWriteRepository implementation
