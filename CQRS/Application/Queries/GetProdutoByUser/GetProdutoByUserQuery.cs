@@ -39,7 +39,6 @@ namespace CQRS.Application.Queries.GetProdutoByUser
             try
             {
                 var produto = ProdutoRepository.FindProdutoByUser(request.UserName);
-                var listaProduto = adapter.Adapt(produto); 
 
                 if (produto.Count == 0)
                 {
@@ -49,12 +48,31 @@ namespace CQRS.Application.Queries.GetProdutoByUser
                     return await Task.FromResult(response);
                 }
 
+                foreach ( var items in produto)
+                {
+                    if( items.Grupo != "")
+                    {
+                        var nomeGrupo = GrupoRepository.FindNomeGrupoById(items.Grupo);
+                   
+                        if( nomeGrupo == null)
+                        {
+                            items.Grupo = ""; 
+                        }
+                    }
+                }
+
+                var listaProduto = adapter.Adapt(produto);                 
+
                 foreach (var groupItem in listaProduto)
                 {
                     if( groupItem.Key.Grupo != "")
                         {
                             var nomeGrupo = GrupoRepository.FindNomeGrupoById(groupItem.Key.Grupo);
-                            groupItem.Key.Grupo = nomeGrupo.NomeGrupoSelected;                         
+
+                            if (nomeGrupo != null)
+                            {
+                                groupItem.Key.Grupo = nomeGrupo.NomeGrupoSelected; 
+                            }                                          
                         }
                     else
                         {
